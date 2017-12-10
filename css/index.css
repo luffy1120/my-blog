@@ -1,0 +1,107 @@
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+}
+body{
+	background:url(../images/bg-1.jpg)  no-repeat;
+	background-size:100% 100%;
+}
+.head {
+	width:80%;
+	height:50px;
+	color:#ffffff;
+	text-align:center;
+	margin:0 auto;
+	padding-top:100px;
+}
+.head p{
+		font-family:"Comic Sans MS",simsun,FangSong_GB2312;
+		line-height:50px;
+		font-size:30px;
+		width:100%;
+}
+.nav{
+	width:80%;
+	color:#ffffff;
+	text-align:center;
+	margin:0 auto;
+}
+.nav:after{
+	content:"";
+	display: block;
+	height:0px;
+	width:0px;
+	line-height:0px;
+	visibility:hidden;
+	clear:both;
+}
+.nav{
+	room:1;
+}
+.nav div{
+	width:150px;
+	height:160px;
+	float:left;
+	background:#000000;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	margin-top:150px;
+	margin-bottom:150px;
+}
+.nav a{
+	display:inline-block;
+	width:150px;
+	height:160px;
+	position:relative;
+}
+.nav a span{
+	font-size:20px;
+	color:#ffffff;
+	position:absolute;
+	top:110px;
+	left:50px;
+}
+.nav_about{
+	margin-left:20%;
+}
+.nav_about a{
+	background:url(../images/about.gif) no-repeat center 30px;
+	background-size:40px;
+}
+.nav_home{
+	margin-left:30px;
+}
+.nav_home a{
+	background:url(../images/home.gif) no-repeat center 30px;
+	background-size:40px;
+}
+.nav_notes{
+	margin-left:30px;
+}
+.nav_notes a{
+	background:url(../images/note.gif) no-repeat center 30px;
+	background-size:40px;
+}
+.nav_work{
+	margin-left:30px;
+}
+.nav_work a{
+	background:url(../images/works.gif) no-repeat center 30px;
+	background-size:40px;
+}
+.footer {
+	width:80%;
+	height:126px;
+	color:#ffffff;
+	text-align:center;
+	margin:0 auto;
+}
+.footer p{
+		font-family:"Comic Sans MS",simsun,FangSong_GB2312;
+		line-height:126px;
+		font-size:20px;
+		width:100%;
+}
