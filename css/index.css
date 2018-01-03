@@ -67,12 +67,26 @@ body{
 .nav_about{
 	margin-left:20%;
 }
+.nav_about:hover a{
+	background:url(../images/about1.png) no-repeat center 30px;
+	background-size:40px;
+}
+.nav_about:hover span{
+	color: #388AC1;
+}
 .nav_about a{
-	background:url(../images/about.gif) no-repeat center 30px;
+	background:url(../images/about.png) no-repeat center 30px;
 	background-size:40px;
 }
 .nav_home{
 	margin-left:30px;
+}
+.nav_home:hover a{
+	background:url(../images/home1.gif) no-repeat center 30px;
+	background-size:40px;
+}
+.nav_home:hover span{
+	color: #388AC1;
 }
 .nav_home a{
 	background:url(../images/home.gif) no-repeat center 30px;
@@ -81,12 +95,26 @@ body{
 .nav_notes{
 	margin-left:30px;
 }
+.nav_notes:hover a{
+	background:url(../images/note1.gif) no-repeat center 30px;
+	background-size:40px;
+}
+.nav_notes:hover span{
+	color: #388AC1;
+}
 .nav_notes a{
 	background:url(../images/note.gif) no-repeat center 30px;
 	background-size:40px;
 }
 .nav_work{
 	margin-left:30px;
+}
+.nav_work:hover a{
+	background:url(../images/works1.gif) no-repeat center 30px;
+	background-size:40px;
+}
+.nav_work:hover span{
+	color: #388AC1;
 }
 .nav_work a{
 	background:url(../images/works.gif) no-repeat center 30px;

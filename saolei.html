@@ -130,7 +130,7 @@
 	<div id="flase">
 	</div>
 	<div id="time"><div>0</div></div>
-	<div id="mine-num"><div>9</div></div>
+	<div id="mine-num"><div>10</div></div>
 	<div id="ob">重新开始</div>
 </div>
 </body>
@@ -172,7 +172,7 @@ function disc(){
 	var aDiv = oMine_disc.getElementsByTagName("div");
 	var dleng = aDiv.length;
 	var his = 0;
-	for(;count<9;){
+	for(;count<10;){
 		var now = Math.floor(Math.random()*81);
 		if(!aDiv[now].disc){
 			aDisc.push(now);
@@ -246,7 +246,7 @@ function play(dleng,aDiv){
 						onRender(aDiv,this.index);
 					}
 				}
-				if(Object.keys(oWin).length == 72){
+				if(Object.keys(oWin).length == 71){
 					clearInterval(timer);
 					oLose.style.display = "block";
 					oLose.innerHTML = "<h1>YOU WIN！</h1>";
@@ -288,6 +288,7 @@ function onRender(c,index){
 				c[tindex].onmouseover = null;
 				oWin[tindex] = "abc";
 				if(c[tindex].mineNum == 0&&!(tindex in oMinel)){
+					console.log(tindex);
 					onRender(c,tindex);
 				}
 			}
