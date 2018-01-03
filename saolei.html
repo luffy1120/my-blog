@@ -128,6 +128,7 @@
 	<div id="mine-disc">
 	</div>
 	<div id="flase">
+		<h1>你输了！</h1>
 	</div>
 	<div id="time"><div>0</div></div>
 	<div id="mine-num"><div>10</div></div>
@@ -147,10 +148,9 @@ var oMine = {};
 var oMinel = {};
 var aDisc = [];
 var oLose = document.getElementById("flase");
-var oWin = {};
+var oWin = 0;
 var aImg = ["image/0.jpg","image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg","image/5.jpg","image/6.jpg","image/7.jpg","image/8.jpg"];
 var oMineHtml = "";
-console.log(11/9)
 document.oncontextmenu = function(){
 	return false;
 }
@@ -159,9 +159,7 @@ function disc(){
 	oMine_disc.innerHTML = "";
 	oMineHtml = "";
 	aDisc = [];
-	oWin = {};
-	time = 0;
-	oTimeC.innerHTML = time;
+	oWin = 0;
 	var count = 0;
 	for(var i=0; i<9;i++){
 		for(var j=0;j<9;j++){
@@ -223,14 +221,12 @@ function play(dleng,aDiv){
 					}
 					clearInterval(timer);
 					oLose.style.display = "block";
-					oLose.innerHTML = "<h1>你输了！</h1>";
 					oBt.style.display = "block";
 					oBt.onclick = function(){
 						oLose.style.display = "none";
 						oBt.style.display = "none";
 						disc();
 						oBt.onclick = null;
-						oB = true;
 					}
 				}
 				else{
@@ -238,25 +234,27 @@ function play(dleng,aDiv){
 						this.style.backgroundImage = "url(" + aImg[this.mineNum]+ ")";
 						this.onmousedown = null;
 						this.onmouseover = null;
-						oWin[this.index] = "abc";
+						oWin++;
 					}
 					else{
 						this.style.backgroundImage = "url(image/0.jpg)";
-						oWin[this.index] = "abc";
+						oWin ++;
 						onRender(aDiv,this.index);
 					}
 				}
+<<<<<<< HEAD
 				if(Object.keys(oWin).length == 71){
+=======
+				if(oWin == 72){
+>>>>>>> parent of 9c1217d... XIIUGAI
 					clearInterval(timer);
-					oLose.style.display = "block";
-					oLose.innerHTML = "<h1>YOU WIN！</h1>";
+					alert("YOU WIN!");
 					oBt.style.display = "block";
 					oBt.onclick = function(){
 						oLose.style.display = "none";
 						oBt.style.display = "none";
 						disc();
 						oBt.onclick = null;
-						oB = true;
 					}
 				}
 			}
@@ -286,12 +284,35 @@ function onRender(c,index){
 				c[tindex].style.backgroundImage = "url(" + aImg[c[tindex].mineNum]+ ")";
 				c[tindex].onmousedown = null;
 				c[tindex].onmouseover = null;
+<<<<<<< HEAD
 				oWin[tindex] = "abc";
 				if(c[tindex].mineNum == 0&&!(tindex in oMinel)){
 					console.log(tindex);
 					onRender(c,tindex);
+=======
+				oWin++;
+				if(c[tindex].mineNum == 0){
+					oMine[tindex] = "abc";
+>>>>>>> parent of 9c1217d... XIIUGAI
 				}
 			}
+		}
+	}
+	for(var attr in oMine){
+		if(!(attr in oMinel)){
+			attr = parseInt(attr);
+			onRender(c,attr);
+		}
+	}
+	if(oWin == 72){
+		clearInterval(timer);
+		alert("YOU WIN!");
+		oBt.style.display = "block";
+		oBt.onclick = function(){
+			oLose.style.display = "none";
+			oBt.style.display = "none";
+			disc();
+			oBt.onclick = null;
 		}
 	}
 }

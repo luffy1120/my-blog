@@ -267,12 +267,12 @@ var oTreeroot = document.getElementsByClassName("treeroot")[0];
 var aDiv = oTreeroot.getElementsByTagName("div");
 var len = aDiv.length;
 var aWiList = [];
-function stopPropagation(e){
-	e = e || window.event;
-	if(e.stopPropagation){
-		e.stopPropagation();
+function stopPropagation(event){
+	var event = event || window.event;
+	if(event.stopPropagation){
+		event.stopPropagation();
 	}else{
-		e.cancelBubble = true;
+		event.cancelBubble = true;
 	}
 }
 function addEventListener(node,type,fn){
@@ -316,18 +316,18 @@ function ele(node){
 	}
 }
 function spread(node){
-	return function (){
+	return function (event){
 		if(node){
-			stopPropagation();
+			stopPropagation(event);
 			if(node.tagName.toLowerCase() === "div"){
 				if(node.parentNode.index){
 					node.style.display = "block";
 				}else{
 					node.style.display = "none";
 				}
-				spread(ele(node))();
+				spread(ele(node))(event);
 			}else{
-				spread(ele(node))();
+				spread(ele(node))(event);
 			}
 		}
 	}
@@ -383,7 +383,7 @@ function overChange(){
 		this.index = true;
 	}
 }
-function search(){
+function search(event){
 	// console.log(oIn.value);
 	if(oIn.value != ""){
 		var sLock = true;
@@ -391,6 +391,7 @@ function search(){
 			if(aDiv[i].getElementsByTagName("span")[0].getElementsByTagName("span")[0].innerHTML == oIn.value){
 				oIn.value = "";
 				aDiv[i].index = true;
+				oIn.value = "";
 				sLock = false;
 				onclickChange.call(aDiv[i]);
 				var node = aDiv[i];
@@ -398,10 +399,10 @@ function search(){
 					node.style.display = "block";
 					node = node.parentNode;
 					node.index = true;
-					spread(node.firstElementChild)();
+					spread(node.firstElementChild)(event);
 					onclickChange.call(node);
 				}
-				spread(node.parentNode.firstElementChild)();
+				spread(node.parentNode.firstElementChild)(event);
 				onclickChange.call(node.parentNode);
 				break;
 			}
