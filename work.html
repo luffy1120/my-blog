@@ -389,6 +389,7 @@ function search(){
 		var sLock = true;
 		for(var i = 0; i < len;i++){
 			if(aDiv[i].getElementsByTagName("span")[0].getElementsByTagName("span")[0].innerHTML == oIn.value){
+				oIn.value = "";
 				aDiv[i].index = true;
 				sLock = false;
 				onclickChange.call(aDiv[i]);
