@@ -6,8 +6,8 @@ a{
 	text-decoration:none;
 }
 body{
-	background:url(../images/bg-1.jpg)  no-repeat;
-	background-size:100% 100%;
+	background: url(../images/bg-1.jpg)  no-repeat;
+	background-size: 100% 100%;
 }
 .head {
 	width:80%;

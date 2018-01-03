@@ -3,8 +3,204 @@
 <head>
 	<meta charset="UTF-8">
 	<title>About</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
 </head>
+<style>
+body{
+	background: url(images/bg-2.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.head img{
+	display: block;
+	margin: 30px auto;
+	width: 150px;
+	height: 150px;
+	border: 4px solid #fff;
+	border-radius: 150px;
+}
+.head p{
+	margin: 0 auto;
+	font-size: 24px;
+	font-weight: bold;
+	font-family:"Comic Sans MS",simsun,FangSong_GB2312;
+	color: #388AC1;
+	text-align: center;
+}
+.introduction:after{
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	clear: both;
+}
+.introduction{
+	zoom: 1;
+}
+.edu{
+/*	background: #388AC1;*/
+	float: left;
+	margin: 20px 40px 20px 100px;
+	width: 350px;
+	height: 230px;
+}
+.edu:after,.skill:after,.contact:after{
+	position: relative;
+	content: "";
+	display: block;
+	height: 250px;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	z-index: -1;
+}
+.edu:after{
+	width: 370px;
+	top: -200px;
+	left: -30px;
+	background: #388AC1;
+}
+.skill:after{
+	top: -244px;
+	left: -60px;
+	width: 600px;
+	background: #388AC1;
+}
+.skill{
+	float: left;
+	margin: 20px 0px 20px 40px;
+	width: 600px;
+	height: 230px;
+}
+.span1{
+	position: relative;
+}
+.span2{
+	position: relative;
+	left: 400px;
+}
+.html,.css,.js,.jq{
+	margin-bottom: 15px;
+}
+.html:before,.css:before,.js:before,.jq:before{
+	content: "";
+	display: block;
+	position: relative;
+	height: 4px;
+	background: #ED6E52;
+}
+.html:before{
+	width: 450px;
+}
+.css:before{
+	width: 400px;
+}
+.js:before{
+	width: 340px;
+}
+.jq:before{
+	width: 300px;
+}
+.html:before,.css:before,.js:before,.jq:before{
+	top: 30px;
+}
+.html:after,.css:after,.js:after,.jq:after{
+	content: "";
+	display: block;
+	position: relative;
+	height: 4px;
+	background: #fff;
+}
+.html:after,.css:after,.js:after,.jq:after{
+	top: 5px;
+}
+.html:after{
+	width: 20px;
+	left: 450px;
+}
+.css:after{
+	width: 70px;
+	left: 400px;
+}
+.js:after{
+	width: 130px;
+	left: 340px;
+}
+.jq:after{
+	width: 170px;
+	left: 300px;
+}
+.contact{
+	float: left;
+	margin: 20px 0px 20px 30px;
+	width: 300px;
+	height: 230px;
+}
+.contact:after{
+	top: -158px;
+	left: -60px;
+	width: 320px;
+	background: #388AC1;
+}
+.contact a{
+	color: #000;
+}
+.contact p{
+	line-height: 30px;
+}
+.project-head{
+	margin: 50px auto;
+	font-size: 30px;
+	font-weight: bold;
+	font-family:"Comic Sans MS",simsun,FangSong_GB2312;
+	color: #388AC1;
+	text-align: center;
+}
+</style>
 <body>
-	
+	<div class="head">
+		<img src="images/my.jpg">
+		<p>嗨，我是陈浩</p>
+		<p>期望职位：前端工程师</p>
+		<p>期望月薪：6K-8K</p>
+		<p>工作性质：全职</p>
+	</div>
+	<div class="introduction">
+		<div class="edu">
+			<h2>Education</h2>
+			<h3>New Web Engineer</h3>
+			<div class="school">
+				<h4>南华大学&nbsp;&nbsp;&nbsp;&nbsp;2012年09月 - 2016年06月</h4>
+				<p>学历： 本科</p>
+				<p>C语言： 二级</p>
+			</div>
+		</div>
+		<div class="skill">
+			<h2>Skills</h2>
+			<div class="html">
+				<span class="span1">HTML</span>
+				<span class="span2">95%</span>
+			</div>
+			<div class="css">
+				<span class="span1">HTML</span>
+				<span class="span2">90%</span>
+			</div>
+			<div class="js">
+				<span class="span1">HTML</span>
+				<span class="span2">60%</span>
+			</div>
+			<div class="jq">
+				<span class="span1">HTML</span>
+				<span class="span2">50%</span>
+			</div>
+		</div>
+		<div class="contact">
+			<h2>contact</h2>
+			<p>所在城市：北京</p>
+			<p>手机号码：<a href="tel:15701585864">15701585864</a></p>
+			<p>邮箱：1354126808@qq.com</p>
+		</div>
+	</div>
+	<div class="project">
+		<div class="project-head">个人项目</div>
+	</div>
 </body>
 </html>
