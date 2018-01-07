@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>About</title>
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="shortcut icon" href="favicon.ico">
 </head>
 <style>
 body{
 	background: url(images/bg-2.jpg) no-repeat;
-	background-size: 100% 100%;
 }
 .head img{
 	display: block;
@@ -36,115 +37,240 @@ body{
 .introduction{
 	zoom: 1;
 }
-.edu{
-/*	background: #388AC1;*/
-	float: left;
-	margin: 20px 40px 20px 100px;
-	width: 350px;
-	height: 230px;
+h2{
+	font-size: 24px;
+	line-height: 50px;
 }
-.edu:after,.skill:after,.contact:after{
-	position: relative;
-	content: "";
-	display: block;
-	height: 250px;
-	opacity: 0.7;
-	filter: alpha(opacity=70);
-	z-index: -1;
+h3{
+	font-size: 20px;
+	font-height: 40px;
 }
-.edu:after{
-	width: 370px;
-	top: -200px;
-	left: -30px;
-	background: #388AC1;
+h4{
+	font-size: 16px;
+	margin-top: 14px;
+	font-weight: normal;
 }
-.skill:after{
-	top: -244px;
-	left: -60px;
-	width: 600px;
-	background: #388AC1;
-}
-.skill{
-	float: left;
-	margin: 20px 0px 20px 40px;
-	width: 600px;
-	height: 230px;
-}
-.span1{
-	position: relative;
-}
-.span2{
-	position: relative;
-	left: 400px;
-}
-.html,.css,.js,.jq{
-	margin-bottom: 15px;
-}
-.html:before,.css:before,.js:before,.jq:before{
-	content: "";
-	display: block;
-	position: relative;
-	height: 4px;
-	background: #ED6E52;
-}
-.html:before{
-	width: 450px;
-}
-.css:before{
-	width: 400px;
-}
-.js:before{
-	width: 340px;
-}
-.jq:before{
-	width: 300px;
-}
-.html:before,.css:before,.js:before,.jq:before{
-	top: 30px;
-}
-.html:after,.css:after,.js:after,.jq:after{
-	content: "";
-	display: block;
-	position: relative;
-	height: 4px;
-	background: #fff;
-}
-.html:after,.css:after,.js:after,.jq:after{
-	top: 5px;
-}
-.html:after{
-	width: 20px;
-	left: 450px;
-}
-.css:after{
-	width: 70px;
-	left: 400px;
-}
-.js:after{
-	width: 130px;
-	left: 340px;
-}
-.jq:after{
-	width: 170px;
-	left: 300px;
-}
-.contact{
-	float: left;
-	margin: 20px 0px 20px 30px;
-	width: 300px;
-	height: 230px;
-}
-.contact:after{
-	top: -158px;
-	left: -60px;
-	width: 320px;
-	background: #388AC1;
+p{
+	margin-top: 14px;
 }
 .contact a{
 	color: #000;
 }
 .contact p{
 	line-height: 30px;
+}
+@media(min-width: 1024px){
+	body{
+		background-size: 100% 100%;
+	}
+	.introduction{
+		position: relative;
+		margin: 20px auto;
+		width: 90%;
+		height: 280px;
+	}
+	.edu,.skill,.contact{
+		padding: 3% 3% 0px;
+		position: absolute;
+		height: 230px;
+	}
+	.edu{
+		top: 0px;
+		left: 0px;
+		width: 25%;
+	}
+	.skill{
+		top: 0px;
+		left: 32%;
+		width: 30%;
+	}
+	.contact{
+		top: 0px;
+		right: 0px;
+		width: 25%;
+	}
+	.edu:after,.skill:after,.contact:after{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		content: "";
+		display: block;
+		width: 100%;
+		height: 280px;
+		background: #388AC1;
+		opacity: 0.7;
+		filter: alpha(opacity=70);
+		z-index: -1;
+	}
+	.skill h2{
+		margin-left: 5%;
+	}
+	.span1{
+		position: relative;
+	}
+	.span2{
+		position: absolute;
+		right: 0px;
+	}
+	.html,.css,.js,.jq{
+		width: 90%;
+		margin:0 auto;
+		margin-bottom: 15px;
+		position: relative;
+	}
+	.html:before,.css:before,.js:before,.jq:before{
+		content: "";
+		display: block;
+		position: relative;
+		height: 4px;
+		background: #ED6E52;
+	}
+	.html:before{
+		width: 95%;
+	}
+	.css:before{
+		width: 90%;
+	}
+	.js:before{
+		width: 60%;
+	}
+	.jq:before{
+		width: 50%;
+	}
+	.html:before,.css:before,.js:before,.jq:before{
+		top: 30px;
+	}
+	.html:after,.css:after,.js:after,.jq:after{
+		content: "";
+		display: block;
+		position: relative;
+		height: 4px;
+		background: #fff;
+	}
+	.html:after,.css:after,.js:after,.jq:after{
+		top: 5px;
+	}
+	.html:after{
+		width: 5%;
+		left: 95%;
+	}
+	.css:after{
+		width: 10%;
+		left: 90%;
+	}
+	.js:after{
+		width: 40%;
+		left: 60%;
+	}
+	.jq:after{
+		width: 50%;
+		left: 50%;
+	}
+}
+@media(max-width: 1024px){
+	.introduction{
+		position: relative;
+		margin: 20px auto;
+		width: 90%;
+		height: 600px;
+	}
+	.edu,.skill,.contact{
+		padding: 3% 3% 0px;
+		position: absolute;
+		height: 230px;
+	}
+	.edu{
+		top: 300px;
+		left: 0px;
+		width: 40%;
+	}
+	.skill{
+		top: 0px;
+		left: 0px;
+		width: 94%;
+	}
+	.contact{
+		top: 300px;
+		right: 0px;
+		width: 40%;
+	}
+	.edu:after,.skill:after,.contact:after{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		content: "";
+		display: block;
+		width: 100%;
+		height: 280px;
+		background: #388AC1;
+		opacity: 0.7;
+		filter: alpha(opacity=70);
+		z-index: -1;
+	}
+	.skill h2{
+		margin-left: 5%;
+	}
+	.span1{
+		position: relative;
+	}
+	.span2{
+		position: absolute;
+		right: 0px;
+	}
+	.html,.css,.js,.jq{
+		width: 90%;
+		margin:0 auto;
+		margin-bottom: 15px;
+		position: relative;
+	}
+	.html:before,.css:before,.js:before,.jq:before{
+		content: "";
+		display: block;
+		position: relative;
+		height: 4px;
+		background: #ED6E52;
+	}
+	.html:before{
+		width: 95%;
+	}
+	.css:before{
+		width: 90%;
+	}
+	.js:before{
+		width: 60%;
+	}
+	.jq:before{
+		width: 50%;
+	}
+	.html:before,.css:before,.js:before,.jq:before{
+		top: 30px;
+	}
+	.html:after,.css:after,.js:after,.jq:after{
+		content: "";
+		display: block;
+		position: relative;
+		height: 4px;
+		background: #fff;
+	}
+	.html:after,.css:after,.js:after,.jq:after{
+		top: 5px;
+	}
+	.html:after{
+		width: 5%;
+		left: 95%;
+	}
+	.css:after{
+		width: 10%;
+		left: 90%;
+	}
+	.js:after{
+		width: 40%;
+		left: 60%;
+	}
+	.jq:after{
+		width: 50%;
+		left: 50%;
+	}
 }
 .project-head{
 	margin: 50px auto;
@@ -180,15 +306,15 @@ body{
 				<span class="span2">95%</span>
 			</div>
 			<div class="css">
-				<span class="span1">HTML</span>
+				<span class="span1">CSS</span>
 				<span class="span2">90%</span>
 			</div>
 			<div class="js">
-				<span class="span1">HTML</span>
+				<span class="span1">JavaScript</span>
 				<span class="span2">60%</span>
 			</div>
 			<div class="jq">
-				<span class="span1">HTML</span>
+				<span class="span1">JQuery</span>
 				<span class="span2">50%</span>
 			</div>
 		</div>
