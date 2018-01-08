@@ -9,7 +9,8 @@ html,body{
 	height: 100%;
 }
 body{
-	background: url(../images/bg-1.jpg)  no-repeat;
+	position: relative;
+	background: url(../images/bg-1.jpg)  no-repeat center;
 	/*background-size: 100% 100%;*/
 }
 .head {
@@ -44,9 +45,9 @@ body{
 	room:1;
 }
 @media(min-width: 1024px){
-	body{
+/*	body{
 		background-size: 100% 100%;
-	}
+	}*/
 	.nav{
 		width: 60%;
 	}
@@ -75,6 +76,9 @@ body{
 		/*top:110px;*/
 		left: 50%;
 		margin-left: -50%;
+	}
+	.footer{
+		top: 630px;
 	}
 }
 @media(max-width: 1024px){
@@ -107,6 +111,9 @@ body{
 		/*top:110px;*/
 		left: 50%;
 		margin-left: -50%;
+	}
+	.footer{
+		top: 630px;
 	}
 }
 @media(max-width: 768px){
@@ -141,6 +148,9 @@ body{
 		/*top:110px;*/
 		left: 50%;
 		margin-left: -50%;
+	}
+	.footer{
+		top: 820px;
 	}
 }
 .nav a,.nav a span{
@@ -198,7 +208,6 @@ body{
 .footer {
 	width:100%;
 	position: absolute;
-	top: 630px;
 	bottom: 0px;
 /*	height:104px;*/
 	color:#ffffff;
