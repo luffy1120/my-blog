@@ -1,0 +1,114 @@
+﻿#disc{
+	width: 1250px;
+	height: 730px;
+	background: #9cabc8;
+	margin: 0 auto;
+	position: relative;
+}
+#mine-disc{
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	width: 450px;
+	height: 450px;
+	margin-left: -225px;
+	margin-top: -275px;
+	border: 2px solid #000;
+}
+#mine-disc div{
+	float: left;
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+	background: #0080ff;
+	background-image: url(../image/bg.jpg);
+	background-size: 50px 50px;
+	border: 1px solid #000;
+	box-shadow: -2px -2px 6px #1b2b7e inset;
+}
+#flase{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -225px;
+	margin-top: -275px;
+	width: 454px;
+	height: 454px;
+	background: #ccc;
+	z-index: 3;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	display:none;
+}
+#flase h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -30px;
+	margin-left: -60px;
+}
+#time{
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	background-image: url(../image/time.jpg);
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+	margin-left: -225px;
+	margin-top: -150px;
+}
+#time div{
+	position: relative;
+	left: 80px;
+	top: 5px;
+	background: #304dc2;
+	width: 80px;
+	height: 40px;
+	border-radius: 5px;
+	text-align: center;
+	color: #fff;
+	line-height: 40px;
+	font-size: 26px;
+}
+#mine-num{
+	position: absolute;
+	top: 100%;
+	right: 50%;
+	background-image: url(../image/mine.jpg);
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+	margin-right: -225px;
+	margin-top: -150px;
+}
+#mine-num div{
+	position: relative;
+	left: -120px;
+	top: 5px;
+	background: #304dc2;
+	width: 80px;
+	height: 40px;
+	border-radius: 5px;
+	text-align: center;
+	color: #fff;
+	line-height: 40px;
+	font-size: 26px;
+}
+#ob{
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	margin-right: -350px;
+	width: 100px;
+	height: 30px;
+	display: none;
+	background: #304dc2;
+	border-radius: 5px;
+	outline: none;
+	text-align: center;
+	color: #fff;
+	line-height: 30px;
+	font-size: 16px;
+	cursor: default;
+}
