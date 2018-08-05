@@ -12,6 +12,7 @@
 body{
 	background: url(images/bg-2.jpg) no-repeat;
 }
+
 .preloader {
   position: fixed;
   top: 0;
@@ -92,6 +93,12 @@ body{
 	font-family:"Comic Sans MS",simsun,FangSong_GB2312;
 	color: #388AC1;
 	text-align: center;
+}
+.head p.self-description,.head p.work-description{
+	width: 80%;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: left;
 }
 .introduction:after{
 	content: "";
@@ -199,10 +206,10 @@ p{
 		width: 90%;
 	}
 	.js:before{
-		width: 60%;
+		width: 70%;
 	}
 	.jq:before{
-		width: 50%;
+		width: 70%;
 	}
 	.html:after,.css:after,.js:after,.jq:after{
 		content: "";
@@ -221,11 +228,37 @@ p{
 		left: 90%;
 	}
 	.js:after{
-		width: 40%;
-		left: 60%;
+		width: 30%;
+		left: 70%;
 	}
 	.jq:after{
+		width: 30%;
+		left: 70%;
+	}
+	.project-content{
+		margin: 0 auto;
 		width: 50%;
+
+	}
+	.project-content li{
+		width: 45%;
+		float: left;
+		margin-right: 5%;
+		border-radius: 100%;
+		overflow: hidden;
+
+	}
+	.project-content li img{
+		display: block;
+		width: 100%;
+		transition: all 0.6s;
+		-webkit-transition: all 0.6s;
+		-moz-transition: all 0.6s;
+	}
+	.project-content li:hover img{
+		transform: scale(1.03,1.03);
+		-webkit-transform: scale(1.03,1.03);
+		-moz-transform: scale(1.03,1.03);
 		left: 50%;
 	}
 }
@@ -300,10 +333,10 @@ p{
 		width: 90%;
 	}
 	.js:before{
-		width: 60%;
+		width: 70%;
 	}
 	.jq:before{
-		width: 50%;
+		width: 70%;
 	}
 	.html:after,.css:after,.js:after,.jq:after{
 		content: "";
@@ -322,10 +355,38 @@ p{
 		left: 90%;
 	}
 	.js:after{
-		width: 40%;
-		left: 60%;
+		width: 30%;
+		left: 70%;
 	}
 	.jq:after{
+		width: 30%;
+		left: 70%;
+	}
+	.project-content{
+		margin: 0 auto;
+		width: 90%;
+
+	}
+
+	.project-content li{
+		width: 45%;
+		float: left;
+		margin-right: 5%;
+		border-radius: 100%;
+		overflow: hidden;
+
+	}
+	.project-content li img{
+		display: block;
+		width: 100%;
+		transition: all 0.6s;
+		-webkit-transition: all 0.6s;
+		-moz-transition: all 0.6s;
+	}
+	.project-content li:hover img{
+		transform: scale(1.03,1.03);
+		-webkit-transform: scale(1.03,1.03);
+		-moz-transform: scale(1.03,1.03);
 		width: 50%;
 		left: 50%;
 	}
@@ -338,6 +399,42 @@ p{
 	color: #388AC1;
 	text-align: center;
 }
+.ret{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+.ret a:hover{
+	text-decoration: none;
+}
+.ret a{
+	display: block;
+	width: 100px;
+	height: 30px;
+	font-size: 16px;
+	text-align: center;
+	background: #388AC1;
+	line-height: 30px;
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.lr3{position: relative;-webkit-transition-duration: 0.3s;-moz-transition-duration: 0.3s;transition-duration: 0.3s;-webkit-transition-property: -webkit-transform;transition-property: -webkit-transform;-moz-transition-property: transform, -moz-transform;transition-property: transform;transition-property: transform, -webkit-transform, -moz-transform;-webkit-transform: translateZ(0);-moz-transform: translateZ(0);transform: translateZ(0);-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);-moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0);box-shadow: 0 0 1px rgba(0, 0, 0, 0);}
+.lr3:hover{-webkit-transform: translateY(-6px);-moz-transform: translateY(-6px);-ms-transform: translateY(-6px);transform: translateY(-6px);-webkit-animation-name: hover;-moz-animation-name: hover;animation-name: hover;-webkit-animation-duration: 1.5s;-moz-animation-duration: 1.5s;animation-duration: 1.5s;-webkit-animation-delay: 0.3s;-moz-animation-delay: 0.3s;animation-delay: 0.3s;-webkit-animation-timing-function: linear;-moz-animation-timing-function: linear;animation-timing-function: linear;-webkit-animation-iteration-count: infinite;-moz-animation-iteration-count: infinite;animation-iteration-count: infinite;-webkit-animation-direction: alternate;-moz-animation-direction: alternate;animation-direction: alternate;}
+.lr3:before {pointer-events: none;position: absolute;z-index: -1;content: '';top: 100%;left: 5%;height: 10px;width: 90%;opacity: 0;background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);background: -moz-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);-webkit-transition-duration: 0.3s;-moz-transition-duration: 0.3s;transition-duration: 0.3s;-webkit-transition-property: opacity, -webkit-transform;transition-property: opacity, -webkit-transform;-moz-transition-property: transform, opacity, -moz-transform;transition-property: transform, opacity;transition-property: transform, opacity, -webkit-transform, -moz-transform;}
+.lr3:hover:before{opacity: 1;-webkit-transform: translateY(5px);-moz-transform: translateY(5px);-ms-transform: translateY(5px);transform: translateY(5px);}
+@-webkit-keyframes hover {
+  50% {-webkit-transform: translateY(-3px);transform: translateY(-3px);}
+  100% {-webkit-transform: translateY(-6px);transform: translateY(-6px);}}
+@-moz-keyframes hover {
+  50% {-moz-transform: translateY(-3px);transform: translateY(-3px);}
+  100% {-moz-transform: translateY(-6px);transform: translateY(-6px);}}
+@keyframes hover {
+  50% {-webkit-transform: translateY(-3px);-moz-transform: translateY(-3px);transform: translateY(-3px);}
+  100% {-webkit-transform: translateY(-6px);-moz-transform: translateY(-6px);transform: translateY(-6px);}}
+
+
 </style>
 <body>
 	<div class="preloader">
@@ -348,8 +445,10 @@ p{
 	<div class="head">
 		<img src="images/my.jpg">
 		<p>嗨，我是陈浩</p>
+		<p class="self-description">&nbsp;&nbsp;&nbsp;&nbsp;我并不是计算机专业,但对前端很感兴趣，所以自学前端并且时刻关注最新前端动态，持续不断地提升自己，我有优秀的自学能力，乐于学习并且学习新知识速度快，我责任心非常强，热爱技术。热衷于技术，崇尚科技改变世界。</p>
+		<p class="work-description">&nbsp;&nbsp;&nbsp;&nbsp;我目前就职于北京弧光之源文化传播有限公司，主要负责公司前端页面制作、动效制作、以及页面简单的测试和与总包公司进行工作的对接，使用原生js和jQuery实现了页面上的相应特效,包括图片的轮播并对页面进行部分优化。</p>
 		<p>期望职位：前端工程师</p>
-		<p>期望月薪：6K-8K</p>
+		<p>期望月薪：10K-15K</p>
 		<p>工作性质：全职</p>
 	</div>
 	<div class="introduction">
@@ -374,11 +473,11 @@ p{
 			</div>
 			<div class="js">
 				<span class="span1">JavaScript</span>
-				<span class="span2">60%</span>
+				<span class="span2">70%</span>
 			</div>
 			<div class="jq">
 				<span class="span1">JQuery</span>
-				<span class="span2">50%</span>
+				<span class="span2">70%</span>
 			</div>
 		</div>
 		<div class="contact">
@@ -390,6 +489,18 @@ p{
 	</div>
 	<div class="project">
 		<div class="project-head">个人项目</div>
+		<div class="project-content">
+			<ul>
+				<li><a href="https://topic.autohome.com.cn/new/marketing/2018/7/i550/" target="_blank"><img src="images/pc.jpg"></a></li>
+				<li><a href="https://topic.m.autohome.com.cn/new/area/2018/8/audi_dongbei/" target="_blank"><img src="images/m.jpg"></a></li>
+
+			</ul>
+
+
+		</div>
+	</div>
+	<div class="ret">
+		<a href="index.html" class=" lr3">返回首页</a>
 	</div>
 </body>
 </html>
